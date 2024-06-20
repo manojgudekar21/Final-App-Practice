@@ -1,1 +1,31 @@
-<p>recepie-details works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <img src="{{recepie.imagePath}}" alt="" class="img-responsive" style="max-width: 300px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a appOpenmenu>
+            <button class="dropdown-toggle">Manage <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a (click)="onClick()" style="cursor: pointer;">To Shopping List</a></li>
+                <li><a style="cursor: pointer;">Edit</a></li>
+            </ul>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{recepie.name}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{recepie.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" *ngFor="let ingrident of recepie.ingridents">
+        {{ingrident.name}} ({{ingrident.amount}})
+    </div>
+</div>

@@ -9,6 +9,8 @@ import { RecepiesComponent } from './recepies/recepies.component';
 import { RecepieListComponent } from './recepies/recepie-list/recepie-list.component';
 import { RecepieDetailsComponent } from './recepies/recepie-details/recepie-details.component';
 import { RecepieItemComponent } from './recepies/recepie-list/recepie-item/recepie-item.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { OpenmenuDirective } from './shared/openmenu.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { RecepieItemComponent } from './recepies/recepie-list/recepie-item/recep
     RecepieListComponent,
     RecepieDetailsComponent,
     RecepieItemComponent,
+    ShoppingEditComponent,
+    OpenmenuDirective,
   ],
   imports: [
     BrowserModule,

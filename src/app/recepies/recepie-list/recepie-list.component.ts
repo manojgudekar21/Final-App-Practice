@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recepie } from 'src/app/shared/recepie.model';
+import { RecepieService } from '../recepie.service';
 
 @Component({
   selector: 'app-recepie-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecepieListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private recepieServcie:RecepieService) { }
 
   ngOnInit(): void {
+    this.recepies = this.recepieServcie.getRecepies()
   }
+  
+  recepies:Recepie[] ;
 
 }
