@@ -13,8 +13,15 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit(): void {
     this.ingridents = this.slService.getIngridents();
+    this.slService.onChangedIngrident.subscribe((ingridents:Ingrident[])=>{
+      this.ingridents = ingridents
+    })
   }
 
   ingridents:Ingrident[] ;
+
+  emitIndex(i:number){
+    this.slService.onSelectedIngrident.next(i);
+  }
 
 }
