@@ -12,6 +12,7 @@ import { RecepieItemComponent } from './recepies/recepie-list/recepie-item/recep
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { OpenmenuDirective } from './shared/openmenu.directive';
 import { FormsModule } from '@angular/forms';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     RecepieItemComponent,
     ShoppingEditComponent,
     OpenmenuDirective,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
